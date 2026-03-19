@@ -11,7 +11,7 @@ env/                  # Another common virtual env name
 
 # Django
 *.log                 # Log files
-local_settings.py     # Local Django settings (if you have one)
+settings.py     # Local Django settings (if you have one)
 db.sqlite3            # SQLite database (not used, but safe)
 /media/               # User-uploaded files
 
