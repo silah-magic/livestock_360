@@ -1,0 +1,15 @@
+asgiref==3.11.1
+Django==5.2.12
+django-cors-headers==4.9.0
+django-filter==25.2
+django-leaflet==0.33.0
+djangorestframework==3.16.1
+GDAL==3.12.1
+git-filter-repo==2.47.0
+numpy @ file:///D:/bld/bld/rattler-build_numpy_1770098404/work/dist/numpy-2.4.2-cp311-cp311-win_amd64.whl#sha256=1dc64abcea7678d915a259496c0283ff327afeed3b11d508be6117caf2623ad7
+packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049096285/work
+pillow==12.1.1
+psycopg2==2.9.11
+python-decouple==3.8
+sqlparse==0.5.5
+tzdata==2025.3

@@ -18,3 +18,12 @@ db.sqlite3            # SQLite database (not used, but safe)
 # OS
 .DS_Store             # macOS folder metadata
 Thumbs.db             # Windows thumbnail cache
+
+.env
+.env.local
+*.env
+settings.py
+*.pyc
+__pycache__/
+venv/
+env/
