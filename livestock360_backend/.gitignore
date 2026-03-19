@@ -1,0 +1,20 @@
+# Python
+__pycache__/         
+*.pyc                
+*.pyo                 # Optimized bytecode
+*.pyd                 # Python dynamic modules (Windows)
+.env                  # Your environment variables (secrets!)
+venv/                 # Virtual environment folder
+env/                  # Another common virtual env name
+.vscode/              # Visual Studio Code settings
+.idea/                # PyCharm/IntelliJ settings
+
+# Django
+*.log                 # Log files
+local_settings.py     # Local Django settings (if you have one)
+db.sqlite3            # SQLite database (not used, but safe)
+/media/               # User-uploaded files
+
+# OS
+.DS_Store             # macOS folder metadata
+Thumbs.db             # Windows thumbnail cache
