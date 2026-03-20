@@ -1,6 +1,8 @@
 from django.contrib.gis.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from datetime import date, timedelta
+
 
 # ------------------------------------------------------------------
 # User Profile Model – extends the built-in User
@@ -70,6 +72,28 @@ class Livestock(models.Model):
 
     def __str__(self):
         return f"{self.tag_id} ({self.get_species_display()})"
+    
+    def get_health_status(self):
+        """
+        Returns 'GREEN', 'YELLOW', or 'RED' based on:
+        - GREEN: valid health certificate
+        - YELLOW: vaccination due within next 7 days
+        - RED: otherwise
+        """
+        # Check for a valid certificate
+        has_valid_cert = self.certificates.filter(is_valid=True, valid_until__gte=date.today()).exists()
+        if has_valid_cert:
+            return 'GREEN'
+
+        # Check for upcoming vaccinations (next_due_date in next 7 days)
+        upcoming = self.health_records.filter(
+            next_due_date__lte=date.today() + timedelta(days=7),
+            next_due_date__gte=date.today()
+        ).exists()
+        if upcoming:
+            return 'YELLOW'
+
+        return 'RED'
 
 
 # ------------------------------------------------------------------

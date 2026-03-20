@@ -1,15 +1,26 @@
+africastalking==2.0.2
 asgiref==3.11.1
+certifi==2026.2.25
+charset-normalizer==3.4.6
 Django==5.2.12
 django-cors-headers==4.9.0
 django-filter==25.2
 django-leaflet==0.33.0
 djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
 GDAL==3.12.1
 git-filter-repo==2.47.0
+idna==3.11
 numpy @ file:///D:/bld/bld/rattler-build_numpy_1770098404/work/dist/numpy-2.4.2-cp311-cp311-win_amd64.whl#sha256=1dc64abcea7678d915a259496c0283ff327afeed3b11d508be6117caf2623ad7
 packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049096285/work
 pillow==12.1.1
 psycopg2==2.9.11
+PyJWT==2.12.1
 python-decouple==3.8
+PyYAML==6.0.3
+requests==2.32.5
+responses==0.26.0
+schema==0.7.8
 sqlparse==0.5.5
 tzdata==2025.3
+urllib3==2.6.3
