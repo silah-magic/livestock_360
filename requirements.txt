@@ -11,7 +11,7 @@ djangorestframework_simplejwt==5.5.1
 GDAL==3.12.1
 git-filter-repo==2.47.0
 idna==3.11
-numpy @ file:///D:/bld/bld/rattler-build_numpy_1770098404/work/dist/numpy-2.4.2-cp311-cp311-win_amd64.whl#sha256=1dc64abcea7678d915a259496c0283ff327afeed3b11d508be6117caf2623ad7
+numpy ==2.4.2
 packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049096285/work
 pillow==12.1.1
 psycopg2==2.9.11
@@ -24,3 +24,8 @@ schema==0.7.8
 sqlparse==0.5.5
 tzdata==2025.3
 urllib3==2.6.3
+psycopg2-binary==2.9.9
+dj-database-url==2.1.0
+whitenoise==6.6.0
+gunicorn==21.2.0
+django-environ==0.11.2
