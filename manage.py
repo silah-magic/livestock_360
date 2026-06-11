@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 import os
-from ctypes import CDLL
+
 import sys
 
-
-CDLL(r"C:\Users\silah\miniconda3\envs\livestock360\Library\bin\gdal.dll")
-CDLL(r"C:\Users\silah\miniconda3\envs\livestock360\Library\bin\geos_c.dll")
+import platform
+if platform.system() == 'Windows':
+    from ctypes import CDLL
+    CDLL(r"C:\Users\silah\miniconda3\envs\livestock360\Library\bin\gdal.dll")
+    CDLL(r"C:\Users\silah\miniconda3\envs\livestock360\Library\bin\geos_c.dll")
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
