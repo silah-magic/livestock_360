@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 set -o errexit
 
-echo "==> Installing system GDAL libraries..."
-mkdir -p /var/lib/apt/lists/partial
-apt-get update -qq
-apt-get install -y gdal-bin libgdal-dev python3-gdal
-
-echo "==> Detecting system GDAL version..."
+echo "==> Checking pre-installed GDAL..."
+gdal-config --version
 GDAL_VERSION=$(gdal-config --version)
-echo "    System GDAL: $GDAL_VERSION"
+echo "    Found GDAL $GDAL_VERSION"
 
-echo "==> Installing Python GDAL..."
+echo "==> Installing Python GDAL matching system version..."
 pip install GDAL==$GDAL_VERSION
 
 echo "==> Installing Python dependencies..."
